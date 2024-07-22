@@ -4,5 +4,11 @@
 
 void _prints(va_list list)
 {
-	_putchar(va_arg(list, int));
+	char *p = va_arg(list, int);
+	int i = 0;
+	
+	while (p != '\0')
+	{
+		_putchar(p[i]);
+	}
 }
