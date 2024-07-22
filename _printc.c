@@ -1,11 +1,7 @@
 #include "main.h"
 
 
-char _printc(char c)
+void _printc(va_list list)
 {
-	if (c < '\0')
-	{
-	_putchar(c);
-	}
-	return (c);
+	²_putchar(va_arg(list, int);
 }
