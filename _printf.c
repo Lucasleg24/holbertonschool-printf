@@ -14,12 +14,12 @@ int _printf(const char *format, ...)
 	int j = 0;
 	int count = 0;
 
-	convert spec[] = {
+	convert_t spec[] = {
 		{"c", _printc},
 		{"s", _prints},
 		{NULL, NULL}
 	};
-	va_start(list, format)
+	va_start(list, format);
 
 	while (format != NULL && format[i] != '\0')
 	{
@@ -33,10 +33,10 @@ int _printf(const char *format, ...)
 				}
 				j++;
 			}
-			_putchar(format[i]);
-			count++;
-			i++;
 		}
+		_putchar(format[i]);
+		count++;
+		i++;
 	}
 	va_end(list);
 	return (count);
