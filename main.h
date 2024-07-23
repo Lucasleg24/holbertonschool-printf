@@ -4,6 +4,7 @@
 #include <stdio.h>
 #include <stddef.h>
 #include <stdarg.h>
+#include <unistd.h>
 
 int _printf(const char *format, ...);
 int _putchar(char c);
@@ -16,10 +17,10 @@ int _prints(va_list list);
  * searching a matching character after a % and execute
  * a matching function.
  */
-struct convert
+typedef struct convert
 {
-	char check;
-	void (*f)(va_list);
-};
+	char *check;
+	int (*f)(va_list);
+} convert_t;
 
 #endif
