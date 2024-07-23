@@ -16,6 +16,8 @@ int _prints(va_list list);
  * struct convert - Structure used in the _printf file for
  * searching a matching character after a % and execute
  * a matching function.
+ * @check: caracter check correspondance with string
+ * @f: pointer to select a function
  */
 typedef struct convert
 {
