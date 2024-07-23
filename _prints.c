@@ -12,6 +12,11 @@ int _prints(va_list list)
 	int i = 0;
 	int count = 0;
 
+	if (list == NULL)
+	{
+		return (0);
+	}
+
 	while (p[i] != '\0')
 	{
 		_putchar(p[i]);
