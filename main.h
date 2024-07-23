@@ -7,8 +7,8 @@
 
 int _printf(const char *format, ...);
 int _putchar(char c);
-char _printc(va_list list);
-char _prints(va_list list);
+int _printc(va_list list);
+int _prints(va_list list);
 
 
 /**
