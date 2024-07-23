@@ -1,6 +1,10 @@
 #include "main.h"
 
-
+/**
+ * _prints - Function which will print a string of characters
+ * @list: List of integers which will be used to browse the exercises
+ * Return: Counts the number of characters typed.
+ */
 
 int _prints(va_list list)
 {
