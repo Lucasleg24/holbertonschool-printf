@@ -27,7 +27,7 @@ int _printf(const char *format, ...)
 		{
 			while (spec[j].check != NULL)
 			{
-				if (*(spec[j].check) == (format[i] + 1))
+				if (*(spec[j].check) == format[i + 1])
 				{
 					count += spec[j].f(list);
 					i += 2;
