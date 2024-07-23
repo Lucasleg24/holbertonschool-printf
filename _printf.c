@@ -17,7 +17,7 @@ int _printf(const char *format, ...)
 	convert_t spec[] = {
 		{"c", _printc},
 		{"s", _prints},
-		{"%", _printc},
+		{"%", _printm},
 		{NULL, NULL}
 	};
 	va_start(list, format);
