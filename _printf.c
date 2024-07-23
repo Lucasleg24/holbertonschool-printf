@@ -30,6 +30,7 @@ int _printf(const char *format, ...)
 				if (*(spec[j].check) == (format[i] + 1))
 				{
 					count += spec[j].f(list);
+					i += 2;
 				}
 				j++;
 			}
