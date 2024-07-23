@@ -1,8 +1,9 @@
 #include "main.h"
 
 /**
- *
- *
+ * _printf - recode the function printf
+ * @format: variable with string
+ * Return: return the number of caracter print with the function
  */
 
 int _printf(const char *format, ...)
@@ -11,6 +12,7 @@ int _printf(const char *format, ...)
 	va_list list;
 	int i = 0;
 	int j = 0;
+	int count = 0;
 
 	convert spec[] = {
 		{"c", _printc},
@@ -27,12 +29,15 @@ int _printf(const char *format, ...)
 			{
 				if (*(spec[j].check) == (format[i] + 1))
 				{
-					spec[j].f(list);
+					count += spec[j].f(list);
 				}
 				j++;
 			}
 			_putchar(format[i]);
+			count++;
 			i++;
 		}
 	}
+	va_end(list);
+	return (count);
 }
