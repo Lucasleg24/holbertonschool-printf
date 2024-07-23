@@ -1,7 +1,13 @@
 #include "main.h"
 
 
-void _printc(va_list list)
+int _printc(va_list list)
 {
-	²_putchar(va_arg(list, int);
+	int count = 0;
+
+	{
+	_putchar(va_arg(list, int));
+	count++;
+	}
+	return (count);
 }
