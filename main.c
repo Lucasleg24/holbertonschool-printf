@@ -45,5 +45,8 @@ int main(void)
     _printf("%c\n", 'S');
     _printf("%d est superieur a %d\n", 10, 5);
     _printf("un %s c'est mieux qu'une %s\n", "velo", "voiture");
+    _printf("%% c'est mieux d'ecrire %s\n", "modulo");
+    _printf("%c,,%c,,%c,,%c\n", 'Y', 'M', 'C', 'A');
+    _printf("%c,%c,%c,%c\n", 'Y', 'M', 'C', 'A');
     return (0);
 }
