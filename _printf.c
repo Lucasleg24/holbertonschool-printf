@@ -43,6 +43,7 @@ int _exec_print(const char *format, va_list list, int count, convert_t spec[])
 	{
 		if (format[i] == '%')
 		{
+			j = 0;
 			while (spec[j].check != NULL)
 			{
 				if (*(spec[j].check) == format[i + 1])
