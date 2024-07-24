@@ -15,7 +15,7 @@ int _printd(va_list list)
 
 	i = atoi(list);
 
-	for (cal = 0; va_arg[cal]; cal++)
+	for (cal = 0; va_arg[cal] != '\0'; cal++)
 	{
 	}
 		while (cal != '\0')
