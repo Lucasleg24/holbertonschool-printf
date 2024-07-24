@@ -10,23 +10,32 @@ int _printd(va_list list)
 {
 	int count = 0;
 	int i;
-	int cal;
-	int result;
+	const char *arg;
+	int d = 1;
+	int result = 1;
+	int c;
 
-	i = atoi(list);
+	arg = va_arg(list, const char *);
+	
+			for (; *arg != '\0'; arg++)
+			{
+			}
+	i = atoi(arg);
+	result = i;
+	if (result < 0)
+	result = -result;
 
-	for (cal = 0; va_arg[cal] != '\0'; cal++)
+	while (result / d >= 10)
 	{
+		d *= 10;
 	}
-		while (cal != '\0')
-		{
-			result = i / 10;
-			_printd(cal - 1);
-		}
-		result % 10;
-		if (result < 0)
-			result = -result;
-		_putchar(result);
-		count++;
-		return (count);
+	while (d > 0)
+	{
+	c = result / d;
+	_putchar('0' + c);
+	result %= d;
+	d /=10;
+	}
+	count++;
+	return (count);
 }

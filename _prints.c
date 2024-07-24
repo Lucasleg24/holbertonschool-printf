@@ -8,11 +8,16 @@
 
 int _prints(va_list list)
 {
-	char *p = va_arg(list, int);
+	char *p = va_arg(list, char*);
 	int i = 0;
 	int count = 0;
 
-	while (p != '\0')
+	if (list == NULL)
+	{
+		return (0);
+	}
+
+	while (p[i] != '\0')
 	{
 		_putchar(p[i]);
 		i++;

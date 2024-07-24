@@ -4,22 +4,26 @@
 #include <stdio.h>
 #include <stddef.h>
 #include <stdarg.h>
+#include <unistd.h>
 
 int _printf(const char *format, ...);
 int _putchar(char c);
-char _printc(va_list list);
-char _prints(va_list list);
+int _printc(va_list list);
+int _prints(va_list list);
+int _printm(__attribute__ ((unused)) va_list list);
 
 
 /**
  * struct convert - Structure used in the _printf file for
  * searching a matching character after a % and execute
  * a matching function.
+ * @check: caracter check correspondance with string
+ * @f: pointer to select a function
  */
-struct convert
+typedef struct convert
 {
-	char check;
-	void (*f)(va_list);
-};
+	char *check;
+	int (*f)(va_list);
+} convert_t;
 
 #endif
