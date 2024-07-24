@@ -41,5 +41,7 @@ int main(void)
     _printf("Unknown:[%r]\n");
     printf("Unknown:[%r]\n");
     _printf("Essayons d'imprimer une phrase simple.%s%c\n", "ce que tu veux", 'c') ;
+    _printf("Let'see if the cast is correctly done: %c. Did it work?\n", 48);
+    _printf("%c", 'S');
     return (0);
 }

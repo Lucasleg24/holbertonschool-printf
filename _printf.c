@@ -21,7 +21,15 @@ int _printf(const char *format, ...)
 		{NULL, NULL}
 	};
 	va_start(list, format);
+	count += _exec_print();
+}
 
+/**
+ *
+ */
+
+int _exec_print(va_list list, int i, int j, int count, struct convert_t)
+{
 	while (format != NULL && format[i] != '\0')
 	{
 		if (format[i] == '%')
@@ -30,8 +38,10 @@ int _printf(const char *format, ...)
 			{
 				if (*(spec[j].check) == format[i + 1])
 				{
+					count += _exec_print(list);
 					count += spec[j].f(list);
 					i += 2;
+					j = 0;
 				}
 				j++;
 			}
