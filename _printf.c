@@ -1,4 +1,5 @@
 #include "main.h"
+int _exec_print(const char *format, va_list list, int count, convert_t spec[]);
 
 /**
  * _printf - recode the function printf
@@ -10,8 +11,6 @@ int _printf(const char *format, ...)
 {
 
 	va_list list;
-	int i = 0;
-	int j = 0;
 	int count = 0;
 
 	convert_t spec[] = {
@@ -21,8 +20,9 @@ int _printf(const char *format, ...)
 		{NULL, NULL}
 	};
 	va_start(list, format);
-	count += _exec_print(list, int i, int j, int count, typedef struct convert_t);
+	count += _exec_print(format, list, count, spec);
 
+	va_end(list);
 	return (count);
 }
 
@@ -30,15 +30,15 @@ int _printf(const char *format, ...)
  * _exec_print - execute the code for return the result at the _printf function
  * @format: string for print and select the modulo
  * @list: contain argument
- * @i: variable for check format
- * @j: variable for check structure
  * @count: variable for count the number of caracter print
- * @convert_t: structure for select the function
+ * @spec: structure for select the function
  * Return: return the value of count
  */
 
-int _exec_print(const char *format, va_list list, int i, int j, int count, typedef struct convert_t)
+int _exec_print(const char *format, va_list list, int count, convert_t spec[])
 {
+	int i = 0, j = 0;
+
 	while (format != NULL && format[i] != '\0')
 	{
 		if (format[i] == '%')
@@ -53,14 +53,9 @@ int _exec_print(const char *format, va_list list, int i, int j, int count, typed
 				j++;
 			}
 		}
-		else
-		{
-			_putchar(format[i]);
-			count++;
-			i++;
-		}
-		j = 0;
+		_putchar(format[i]);
+		count++;
+		i++;
 	}
-	va_end(list);
 	return (count);
 }
