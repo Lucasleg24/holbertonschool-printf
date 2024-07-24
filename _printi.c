@@ -14,7 +14,7 @@ int _printi(va_list list)
 
 	if (list < 0)
 		list = -list;
-	if (list = n)
+	if (list < n)
 		list[i] = '-';
 	while (list > 0)
 	{
