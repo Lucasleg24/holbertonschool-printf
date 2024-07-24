@@ -3,24 +3,30 @@
 /**
  * _printi - Function which will be used to print a string of integers
  * @list: List of integers which will be used in the exercise.
- * Return: The integer i in the string list
+ * Return: The number of characters returned via count.
  */
 
 int _printi(va_list list)
 {
 	int count = 0;
 	int i = 0;
-	int n = 0;
+	int n;
+	int result = 0;
 
-	if (list < 0)
-		list = -list;
-	if (list < n)
-		list[i] = '-';
-	while (list > 0)
+	i = atoi(list);
+
+	for (n = 0; va_arg[n] != '\0'; n++)
 	{
-		list[i] = (list % 10) + '0';
-		list /= 10;
-		count++;
 	}
-	return (list[i]);
+	while (n != 0)
+	{
+		result = i / 10;
+		_printi(cal - 1);
+	}
+	result % 10;
+	if (result < 0)
+		result = -result;
+	_putchar(result);
+	count++;
+	return (count);
 }
