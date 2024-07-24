@@ -21,7 +21,7 @@ int _printi(va_list list)
 	while (n != 0)
 	{
 		result = i / 10;
-		_printi(cal - 1);
+		_printi(n - 1);
 	}
 	result % 10;
 	if (result < 0)
