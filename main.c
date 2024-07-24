@@ -42,6 +42,8 @@ int main(void)
     printf("Unknown:[%r]\n");
     _printf("Essayons d'imprimer une phrase simple.%s%c\n", "ce que tu veux", 'c') ;
     _printf("Let'see if the cast is correctly done: %c. Did it work?\n", 48);
-    _printf("%c", 'S');
+    _printf("%c\n", 'S');
+    _printf("%d est superieur a %d\n", 10, 5);
+    _printf("un %s c'est mieux qu'une %s\n", "velo", "voiture");
     return (0);
 }
