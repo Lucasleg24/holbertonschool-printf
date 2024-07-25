@@ -132,7 +132,7 @@ printf("\n");
     _printf("Essayons d'imprimer une phrase simple.%s%c\n", "ce que tu veux", 'c') ;
     _printf("Let'see if the cast is correctly done: %c. Did it work?\n", 48);
     _printf("%c\n", 'S');
-    _printf("%d est superieur a %d\n", 10, 5);
+    _printf("%d est superieur a %d\n", 123, 52);
     _printf("un %s c'est mieux qu'une %s\n", "velo", "voiture");
     _printf("%% c'est mieux d'ecrire %s\n", "modulo");
     _printf("%c,,%c,,%c,,%c\n", 'Y', 'M', 'C', 'A');
