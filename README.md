@@ -16,25 +16,25 @@ Further down this page you will get informations aswell as instructions on how t
 **README.md**
 > This is where you are right now, it is used to explain how to use `_printf.c`
 
-**`main.h`**
+**main.h**
 > `main.h` is the file where all of the prototypes for every functions are, it is used as a local library.
 
-**`putchar.c`**
+**putchar.c**
 > `_putchar` is used to print a single character at the time.
 
-**`printf.c`**
+**printf.c**
 > `_printf` is used to call upon other functions such as `_printc` and `_prints` in order to print integers and characters.
 
-**`printc.c`**
+**printc.c**
 > `_printc` is used to print a single character.
 
-**`prints.c`**
+**prints.c**
 > `_prints` is used to print a string of characters.
 
-**`printm.c`**
+**printm.c**
 > `_printm`is used to print a modulo (%).
 
-**`printd.c`**
+**printd.c**
 > `_printi` is used to print integers/numbers.
 
 ## Prerequisite
