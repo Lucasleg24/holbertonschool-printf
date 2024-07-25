@@ -11,7 +11,6 @@ int _putchar(char c);
 int _printc(va_list list);
 int _prints(va_list list);
 int _printm(__attribute__ ((unused)) va_list list);
-int _printd(va_list list);
 
 
 /**
