@@ -7,22 +7,19 @@
  * Return: 0 or Result
  */
 
-int Divide(int result, int count)
+int Divide(int result, int count, va_list list)
 {
-	va_list list;
+	const char *arg;
 
 	arg = va_arg(list, const char *);
 
-	if (arg / 10 == 0)
-	{
+	if (*arg == '\0')
 		return (0);
-	}
-	arg = arg / 10;
-	divide(arg);
-
-	result = arg % 10;
-	return (result);
+	if (*arg / 10 == 0)
+		return (0);
+	result = *arg % 10;
 	count++;
+	return (Divide(result, count, list));
 }
 
 /**
@@ -33,7 +30,10 @@ int Divide(int result, int count)
 
 int _printd(va_list list)
 {
-	Divide(int result, int count);
-	count++;
+	int count = 0;
+	int result = 0;
+
+	result = Divide(result, count, list);
+
 	return (count);
 }
