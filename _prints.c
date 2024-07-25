@@ -12,9 +12,9 @@ int _prints(va_list list)
 	int i = 0;
 	int count = 0;
 
-	if (list == NULL)
+	if (p == NULL)
 	{
-		return (0);
+		p = "(null)";
 	}
 
 	while (p[i] != '\0')
