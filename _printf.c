@@ -49,14 +49,17 @@ int _exec_print(const char *format, va_list list, int count, convert_t spec[])
 				if (*(spec[j].check) == format[i + 1])
 				{
 					count += spec[j].f(list);
-					i += 2;
 				}
 				j++;
 			}
+			i += 2;
 		}
-		_putchar(format[i]);
-		count++;
-		i++;
+		else
+		{
+			_putchar(format[i]);
+			count++;
+			i++;
+		}
 	}
 	return (count);
 }
