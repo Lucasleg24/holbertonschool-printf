@@ -1,0 +1,43 @@
+.TH PRINTF 3 "25 JUILLET 2024" 
+
+.SH NAME
+_printf \- Function used to print characters and integers alike.
+
+.SH SYNOPSIS
+.B #include <stdarg.h>
+.B #include <stdlib.h>
+.B #include <stdio.h>
+.B #include <stddef.h>
+.B #include <unistd.h>
+
+.SH DESCRIPTION
+.B _printf
+This function is used to print characters and integers.
+
+.I format
+Format is a character string which was used as an argument.
+
+.TP
+.B %c
+Prints a character.
+
+.B %s
+Prints a string of characters.
+
+.B %%
+Prints a modulo (%).
+
+.SH RETURN VALUE
+The function
+.B _printf
+returns characters and integers aswell as the number of characters displayed, otherwise it returns an error or a negative value.
+
+.SH ERRORS
+In case of the 
+.B _printf
+function malfunctioning, it will return an error or -1.
+
+.SH AUTHORS
+.I Lucas Legrand
+
+.I Florian Bombeeck
