@@ -37,11 +37,13 @@ int _printf(const char *format, ...)
 
 int _exec_print(const char *format, va_list list, int count, convert_t spec[])
 {
-	int i = 0, j = 0;
+	int i = 0, j;
 
+	if (format == NULL)
+		return (-1);
 	while (format != NULL && format[i] != '\0')
 	{
-		if (format[i] == '%')
+		if (format[i] == '%' && format[i + 1] != '\0')
 		{
 			j = 0;
 			while (spec[j].check != NULL)
@@ -49,10 +51,18 @@ int _exec_print(const char *format, va_list list, int count, convert_t spec[])
 				if (*(spec[j].check) == format[i + 1])
 				{
 					count += spec[j].f(list);
+					i += 2;
+					break;
 				}
 				j++;
 			}
-			i += 2;
+			if (spec[j].check == NULL)
+			{
+				_putchar('%');
+				_putchar(format[i + 1]);
+				count += 2;
+				i += 2;
+			}
 		}
 		else
 		{
