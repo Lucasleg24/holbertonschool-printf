@@ -5,36 +5,36 @@ This project's goal is to recreate the `printf` function in order to push furthe
 Further down this page you will get informations aswell as instructions on how to use our `_printf`function.
 
 # Summary
-+ [Contents of the repository](https://github.com/Lucasleg24/holbertonschool-printf/README.md#Contents_of_the_repository)
-+ [Prerequisite](https://github.com/Lucasleg24/holbertonschool-printf/README.md#Prerequisite)
-+ [Installation](https://github.com/Lucasleg24/holbertonschool-printf/README.md#Installation)
-+ [How to use](https://github.com/Lucasleg24/holbertonschool-printf/README.md#How_to_use)
-+ [Flowchart](https://github.com/Lucasleg24/holbertonschool-printf/README.md#Flowchart)
-+ [Authors](https://github.com/Lucasleg24/holbertonschool-printf/README.md#Authors)
++ [Contents of the repository](https://github.com/Lucasleg24/holbertonschool-printf/blob/Florian/README.md#contents-of-the-repository)
++ [Prerequisite](https://github.com/Lucasleg24/holbertonschool-printf/blob/Florian/README.md#prerequisite)
++ [Installation](https://github.com/Lucasleg24/holbertonschool-printf/blob/Florian/README.md#installation)
++ [How to use](https://github.com/Lucasleg24/holbertonschool-printf/blob/Florian/README.md#how-to-use)
++ [Flowchart](https://github.com/Lucasleg24/holbertonschool-printf/blob/Florian/README.md#flowchart)
++ [Authors](https://github.com/Lucasleg24/holbertonschool-printf/blob/Florian/README.md#flowchart)
 
 ## Contents of the repository
-# README.md
+**README.md**
 > This is where you are right now, it is used to explain how to use `_printf.c`
 
-# `main.h`
+**`main.h`**
 > `main.h` is the file where all of the prototypes for every functions are, it is used as a local library.
 
-# `_putchar.c`
+**`putchar.c`**
 > `_putchar` is used to print a single character at the time.
 
-# `_printf.c`
+**`printf.c`**
 > `_printf` is used to call upon other functions such as `_printc` and `_prints` in order to print integers and characters.
 
-# `_printc.c`
+**`printc.c`**
 > `_printc` is used to print a single character.
 
-# `_prints.c`
+**`prints.c`**
 > `_prints` is used to print a string of characters.
 
-# `_printm.c`
+**`printm.c`**
 > `_printm`is used to print a modulo (%).
 
-# `_printd.c`
+**`printd.c`**
 > `_printi` is used to print integers/numbers.
 
 ## Prerequisite
@@ -59,11 +59,8 @@ gcc {YourFile}.c -o {NameDesired} && ./{NameDesired}
 How to display a character :
 ```c
 #include "main.h"
-/**
-This will be used to include the prototypes from the main.h file
-/**
-
-int main() 
+*This will let you use the prototype stored in main.h*
+int main()
 {
 	_printf("Character: [%c]\n", "A");
 	return (0);
