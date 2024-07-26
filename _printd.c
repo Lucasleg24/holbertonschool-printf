@@ -9,7 +9,7 @@
 
 int Divide(int result, int count)
 {
-
+	count = 0;
 	if (result / 10 == 0)
 	{
 		_putchar(result % 10 + '0');
@@ -44,7 +44,7 @@ int _printd(va_list list)
 		result = -result;
 		count++;
 	}
-
 	count += Divide(result, count);
+
 	return (count);
 }
