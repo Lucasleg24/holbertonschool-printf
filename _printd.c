@@ -42,6 +42,6 @@ int _printd(va_list list)
 	int count = 0;
 	int result = va_arg(list, int);
 
-	Divide(result, count);
+	count += Divide(result, count);
 	return (count);
 }
