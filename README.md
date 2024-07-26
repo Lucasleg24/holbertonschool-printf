@@ -75,11 +75,12 @@ Character: A
 ```
 
 Of course you can use the other variations such as :
-| Input  |     Output     |
-| ---------- | -------------- |
+| Input       |     Output     |
+| ----------  | -------------- |
 | `%c`        | character      |
 | `%s`        | string         |
-| `%`        | %              |
+| `%`         | %              |
+| `%d` or `%i`| signed integer |
 
 ### In case of a bad input !
 Let's say you want to print the string `'Hello World!'`
