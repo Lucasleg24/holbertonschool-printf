@@ -89,14 +89,14 @@ for example :
 
 int main()
 {
-	_printf("Hello World!\n", %c);
+	_printf("[%c]\n", "Hello World!");
 
 	return(0);
 )
 ```
 This wouldn't work because you want to print a string but use `%c` which is used to print a single character so the output would be as follows.
 ```c
-H
+[]
 ```
 In order to get the expected result, you should have replaced the `%c` with an `%s` which is used to print strings.
 
