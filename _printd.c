@@ -10,9 +10,6 @@
 int Divide(int result, int count)
 {
 
-	if (result == '\0')
-		return (0);
-
 	if (result / 10 == 0)
 	{
 		_putchar(result % 10 + '0');
@@ -22,9 +19,9 @@ int Divide(int result, int count)
 
 	if (result / 10 != 0)
 	{
-
-		Divide(result / 10, count++);
+		count += Divide(result / 10, count);
 		_putchar(result % 10 + '0');
+		count++;
 	}
 
 	return (count);

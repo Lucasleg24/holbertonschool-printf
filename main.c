@@ -5,6 +5,7 @@
 
 int main(void)
 {
+	int rest;
 int len, len2;
 char *str = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus in pretium nulla, ut lacinia felis. Aenean id erat sed magna varius pulvinar et ac magna. Praesent ultrices sed ex a tincidunt. Donec volutpat in ante at iaculis. Phasellus dapibus, diam eget lobortis tristique, elit nunc feugiat metus, a dapibus elit lorem vitae ante. Nulla commodo ut tortor eget molestie. Aliquam tempus vestibulum felis. Vestibulum condimentum volutpat fermentum. Nulla tortor lacus, lobortis quis viverra fusce.";
 
@@ -141,7 +142,8 @@ printf("\n");
     printf("%c,%c,%c,%c\n", 'Y', 'M', 'C', 'A');
     _printf("%c\n", "je suis un poisson");
     printf("%c\n", "je suis un poisson");
-    _printf("%d", 1024);
+    rest = _printf("%d\n", 1024);
+    printf("%d\n", rest);
 
 return (0);
 }
