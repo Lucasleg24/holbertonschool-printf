@@ -16,8 +16,6 @@ int _printf(const char *format, ...)
 	convert_t spec[] = {
 		{"c", _printc},
 		{"s", _prints},
-		{"d", _printd},
-		{"i", _printd},
 		{"%", _printm},
 		{NULL, NULL}
 	};
@@ -42,6 +40,8 @@ int _exec_print(const char *format, va_list list, int count, convert_t spec[])
 	int i = 0, j;
 
 	if (format == NULL)
+		return (-1);
+	if (format[i] == '%' && format [i + 1] == '\0')
 		return (-1);
 	while (format != NULL && format[i] != '\0')
 	{
