@@ -1,4 +1,5 @@
 #include "main.h"
+#include <limits.h>
 
 /**
  * Divide - Function used to divide each numbers of a string
@@ -38,13 +39,29 @@ int _printd(va_list list)
 	int count = 0;
 	int result = va_arg(list, int);
 
-	if (result < 0)
+	if (result == INT_MIN)
+	{
+		_putchar('-');
+		count++;
+		result = result / 10;
+		result = -result;
+		count += Divide(result, count);
+		_putchar('8');
+		count++;
+		return (count);
+	}
+
+	if (result < 0 && result != INT_MIN)
 	{
 		_putchar('-');
 		result = -result;
 		count++;
+		count += Divide(result, count);
 	}
-	count += Divide(result, count);
+	else
+	{
+		count += Divide(result, count);
+	}
 
 	return (count);
 }
