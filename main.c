@@ -144,6 +144,8 @@ printf("\n");
     printf("%c\n", "je suis un poisson");
     rest = _printf("%d\n", 1024);
     printf("%d\n", rest);
+    rest = _printf("%d\n", -1024);
+    printf("%d\n", rest);
 
 return (0);
 }
