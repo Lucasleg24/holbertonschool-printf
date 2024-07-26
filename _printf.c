@@ -41,7 +41,7 @@ int _exec_print(const char *format, va_list list, int count, convert_t spec[])
 
 	if (format == NULL)
 		return (-1);
-	if (format[i] == '%' && format [i + 1] == '\0')
+	if (format[i] == '%' && format[i + 1] == '\0')
 		return (-1);
 	while (format != NULL && format[i] != '\0')
 	{
