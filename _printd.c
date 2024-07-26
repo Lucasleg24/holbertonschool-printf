@@ -41,9 +41,10 @@ int _printd(va_list list)
 	if (result < 0)
 	{
 		_putchar('-');
-		result = result * (-1);
+		result = -result;
 		count++;
 	}
+
 	count += Divide(result, count);
 	return (count);
 }
