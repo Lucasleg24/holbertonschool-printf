@@ -16,6 +16,8 @@ int _printf(const char *format, ...)
 	convert_t spec[] = {
 		{"c", _printc},
 		{"s", _prints},
+		{"d", _printd},
+		{"i", _printd},
 		{"%", _printm},
 		{NULL, NULL}
 	};

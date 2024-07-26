@@ -13,6 +13,13 @@ int Divide(int result, int count)
 	if (result == '\0')
 		return (0);
 
+	if (result / 10 == 0)
+	{
+		_putchar(result % 10 + '0');
+		count++;
+		return (count);
+	}
+
 	if (result / 10 != 0)
 	{
 
@@ -36,6 +43,5 @@ int _printd(va_list list)
 	int result = va_arg(list, int);
 
 	Divide(result, count);
-	_putchar(result % 10 + '0');
 	return (count);
 }
