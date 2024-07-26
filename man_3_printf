@@ -1,4 +1,4 @@
-.TH PRINTF 3 "25 JUILLET 2024" 
+.TH PRINTF 3 "25 JUILLET 2024"
 
 .SH NAME
 _printf \- Function used to print characters and integers alike.
@@ -33,11 +33,24 @@ The function
 returns characters and integers aswell as the number of characters displayed, otherwise it returns an error or a negative value.
 
 .SH ERRORS
-In case of the 
+In case of the
 .B _printf
 function malfunctioning, it will return an error or -1.
 
+.SH EXAMPLE
+
+.B _printf("[%c]\n", A)
+This will print the character A
+
+.B _printf("[%s]\n", "Hello World!")
+This will print the string Hello World!
+
+.B _printf("[%%]\n")
+This will print a modulo (%)
+
 .SH AUTHORS
 .I Lucas Legrand
+(https://github.com/Lucasleg24)
 
 .I Florian Bombeeck
+(https://github.com/Pandor3)

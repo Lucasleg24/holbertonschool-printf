@@ -43,7 +43,7 @@ If you wish to compile, you will need a compiler such as gcc.
 ## Installation
 First, you will need to clone the repository in your terminal.
 ```bash
-git clone https://github.com/Lucasleg24/holbertonschool-printf.git
+git clone https://{YOURTOKEN}@github.com/Lucasleg24/holbertonschool-printf.git
 ```
 Then you will need to move to the folder where `_printf.c` is located.
 ```bash
@@ -56,29 +56,49 @@ gcc {YourFile}.c -o {NameDesired} && ./{NameDesired}
 ```
 
 ## How to use
-How to display a character :
+Example:
+How to display a character
 ```c
 #include "main.h"
 *This will let you use the prototype stored in main.h*
 int main()
 {
-	_printf("Character: [%c]\n", "A");
+	_printf("Character: [%c]\n", A);
+*The %c is used to call the _printc function located in the _printc file which is pointed into the main.h file*
 	return (0);
 }
 ```
 
-The output expected should be:
+The expected output should be
 ```c
 Character: A
 ```
 
 Of course you can use the other variations such as :
-| Variation  |     Output     |
+| Input  |     Output     |
 | ---------- | -------------- |
 | `%c`        | character      |
 | `%s`        | string         |
-| `%d` or `%i` | Signed integer |
 | `%`        | %              |
+
+### In case of a bad input !
+Let's say you want to print the string `'Hello World!'`
+for example :
+```c
+#include "main.h"
+
+int main()
+{
+	_printf("[%c]\n", "Hello World!");
+
+	return(0);
+)
+```
+This wouldn't work because you want to print a string but use `%c` which is used to print a single character so the output would be as follows.
+```c
+[]
+```
+In order to get the expected result, you should have replaced the `%c` with an `%s` which is used to print strings.
 
 ## Flowchart
 
