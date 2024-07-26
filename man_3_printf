@@ -27,6 +27,12 @@ Prints a string of characters.
 .B %%
 Prints a modulo (%).
 
+.B %d
+Prints a string of integers.
+
+.B %i
+Prints a string of integers.
+
 .SH RETURN VALUE
 The function
 .B _printf
@@ -47,6 +53,12 @@ This will print the string Hello World!
 
 .B _printf("[%%]\n")
 This will print a modulo (%)
+
+.B _printf("[%d]\n", 1984)
+This will print the string of integers 1984
+
+.B _printf("[%i]\n", 1894)
+This will print the string of integers 1894
 
 .SH AUTHORS
 .I Lucas Legrand

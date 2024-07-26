@@ -35,7 +35,7 @@ Further down this page you will get informations aswell as instructions on how t
 > `_printm`is used to print a modulo (%).
 
 **printd.c**
-> `_printi` is used to print integers/numbers.
+> `_printd` is used to print integers/numbers.
 
 ## Prerequisite
 If you wish to compile, you will need a compiler such as gcc.
@@ -75,11 +75,12 @@ Character: A
 ```
 
 Of course you can use the other variations such as :
-| Input  |     Output     |
-| ---------- | -------------- |
+| Input       |     Output     |
+| ----------  | -------------- |
 | `%c`        | character      |
 | `%s`        | string         |
-| `%`        | %              |
+| `%`         | %              |
+| `%d` or `%i`| signed integer |
 
 ### In case of a bad input !
 Let's say you want to print the string `'Hello World!'`
